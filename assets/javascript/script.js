@@ -2,3 +2,7 @@
 $(document).ready(function(){
     $('.sidenav').sidenav();
   });
+//   Initalizes the materilize parallax
+  $(document).ready(function(){
+    $('.parallax').parallax();
+  });
