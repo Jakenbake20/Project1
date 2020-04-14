@@ -7,12 +7,24 @@ $(document).ready(function(){
     $('.parallax').parallax();
   });
 
+var chuckAPI = "https://api.chucknorris.io/jokes/random";
 var gifArray = ['Cats', 'Animals', 'Monkeys', 'Boredom']
-//var gifName = "";  
-//var gifAPI = 'https://api.giphy.com/v1/gifs/search?q= ' + gifName + ' &api_key=zQ9cvPUPVYGG0yHzaLmUuFwz7v7Iq5zi&limit=10'
 
 $(document).ready(function() {
-
+	
+	$.ajax({
+		url: chuckAPI,
+		type: "GET"
+	}).done(function(response){
+		console.log(response);
+		var newChuck = $("<div id='chuckjoke'>");
+		var joke = response.value;
+		var pJoke = $("<p>").html(joke);
+		newChuck.append(pJoke);
+		$("#top").prepend(newChuck);
+	});
+	
+	//creates buttons for gifs
 	function createButtons() {
 		
 		$("#buttons").empty()
@@ -33,7 +45,7 @@ $(document).ready(function() {
 		gifArray.push(newInput);
 		createButtons()
 	})
-	
+	//pulls and display's gifs
 	function displayGif() {
 		$('#gifshere').empty();
 		var gifName = $(this).attr("data");

@@ -11,3 +11,9 @@ nav{
 .contentbody{
     height:100vh;
 }
+
+.newgif {
+    float: left;
+    display: inline-block;
+    margin: 10px;
+}
