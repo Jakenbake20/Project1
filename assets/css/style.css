@@ -1,3 +1,13 @@
 nav{
     background-color:rebeccapurple;
+    padding-left:50px;
+    padding-right:50px;
+}
+.sidebar{
+    
+    height:100vh;
+    
+}
+.contentbody{
+    height:100vh;
 }
