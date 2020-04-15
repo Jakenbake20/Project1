@@ -59,14 +59,14 @@ $(document).ready(function() {
 		for(var i = 0; i < gifArray.length; i++) {
 		
 			var newButton = $("<button>");
-			newButton.addClass("gifbutton");
+			newButton.addClass("gifbutton waves-effect waves-light red darken-4 btn");
 			newButton.attr("data", gifArray[i]);
 			newButton.text(gifArray[i]);
 			$("#buttons").append(newButton);
 		}
 	}
 	
-	$("#add-item").on("click", function(event) {
+	$("#addGif").on("click", function(event) {
 		event.preventDefault();
 		var newInput = $("#input").val();
 		displayGif()
@@ -92,7 +92,7 @@ $(document).ready(function() {
 			var imageF = $('<div class="newgif hoverable">').html(image);
 			$('#gifshere').append(imageF);
 		}
-	
+			$('.newgif').wrapAll("<div class=ng2 />")
 		$('.movImage').on('click', function() {
 			var state = $(this).attr('data-state');
 			if (state == 'still') {

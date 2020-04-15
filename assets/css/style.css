@@ -71,7 +71,6 @@ body {
     padding: 0, 10px;
   }
 
-  .gifform {
-      
-  }
-      
+#addgif {
+    color: white;
+} 
