@@ -12,17 +12,26 @@ nav{
     height:100vh;
 }
 
-.newgif {
-    float: left;
-    display: inline-block;
-    margin: 10px;
+.header {
+    text-align: center;
+
 }
-.cdcbtn{
-    background-color:rebeccapurple;
-}
+
 .colormefooter{
     background-color: rebeccapurple;
 }
 .symptom{
     list-style-type: initial;
+}
+#monster {
+  position: absolute;
+  left: 0px;
+  top: 100px;
+  z-index: -1;
+  width: auto;
+  height: 30em;
+}
+
+p {
+    text-align: center;
 }
