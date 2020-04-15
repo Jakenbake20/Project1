@@ -12,7 +12,6 @@ nav{
     height:100vh;
 }
 
-<<<<<<< HEAD
 .header {
     text-align: center;
 
@@ -20,16 +19,4 @@ nav{
 
 p {
     text-align: center;
-=======
-.newgif {
-    float: left;
-    display: inline-block;
-    margin: 10px;
-}
-.cdcbtn{
-    background-color:rebeccapurple;
-}
-.colormefooter{
-    background-color: rebeccapurple;
->>>>>>> e0467a1c7a570516074706b7bebbd51cb43363e6
 }
