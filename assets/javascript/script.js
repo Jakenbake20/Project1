@@ -59,24 +59,25 @@ $(document).ready(function() {
 		for(var i = 0; i < gifArray.length; i++) {
 		
 			var newButton = $("<button>");
-			newButton.addClass("gifbutton");
+			newButton.addClass("gifbutton waves-effect waves-light red darken-4 btn");
 			newButton.attr("data", gifArray[i]);
 			newButton.text(gifArray[i]);
 			$("#buttons").append(newButton);
 		}
 	}
 	
-	$("#add-item").on("click", function(event) {
+	$("#addGif").on("click", function(event) {
 		event.preventDefault();
 		var newInput = $("#input").val();
-		gifArray.push(newInput);
-		createButtons()
+		displayGif()
+		
 	})
 	//pulls and display's gifs
 	function displayGif() {
 		$('#gifshere').empty();
 		var gifName = $(this).attr("data");
-		var gifAPI = 'https://api.giphy.com/v1/gifs/search?q= ' + gifName + ' &api_key=zQ9cvPUPVYGG0yHzaLmUuFwz7v7Iq5zi&limit=5'
+		var newInput = $("#input").val();
+		var gifAPI = 'https://api.giphy.com/v1/gifs/search?q= ' + (gifName || newInput) + ' &api_key=zQ9cvPUPVYGG0yHzaLmUuFwz7v7Iq5zi&limit=5'
 		$.ajax({
 			url: gifAPI,
 			type: "GET"
@@ -86,12 +87,12 @@ $(document).ready(function() {
 			var rating = "<div class='ratings'> Rating:  " + (response.data[i].rating) + " </div>";
 			var image = rating + '<img src= " ' + response.data[i].images.fixed_height_still.url +
 				'" data-still=" ' + response.data[i].images.fixed_height_still.url +
-				' " data-animate=" ' + response.data[i].images.fixed_height.url + '" data-state="still" class="movImage">';
+				' " data-animate=" ' + response.data[i].images.fixed_height.url + '" data-state="still" class="movImage responsive-img">';
 	
-			image = '<div class="newgif">' + image + "</div>";
-			$('#gifshere').prepend(image);
+			var imageF = $('<div class="newgif hoverable">').html(image);
+			$(imageF).appendTo('#gifshere');
 		}
-	
+			$('.newgif').wrapAll("<div class=ng2 />")
 		$('.movImage').on('click', function() {
 			var state = $(this).attr('data-state');
 			if (state == 'still') {
@@ -103,7 +104,6 @@ $(document).ready(function() {
 			}
 	
 		});
-		
 	});
 	}
 	

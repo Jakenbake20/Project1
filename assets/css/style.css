@@ -1,3 +1,7 @@
+@font-face {
+    font-family: chuck;
+    src: url(../fonts/bohemian-typewriter/Bohemian\ Typewriter.ttf)
+}
 nav{
     background-color:rebeccapurple;
     padding-left:50px;
@@ -9,7 +13,7 @@ nav{
     
 }
 .contentbody{
-    height:100vh;
+    height: auto;
 }
 
 .header {
@@ -20,9 +24,14 @@ nav{
 .colormefooter{
     background-color: rebeccapurple;
 }
-.symptom{
-    list-style-type: initial;
+
+.symptom {
+    list-style-type: space-counter;
+    font-weight: bold;
+    color: #b71c1c;
+    text-align: center;
 }
+
 #monster {
   position: absolute;
   left: 0px;
@@ -36,8 +45,32 @@ p {
     text-align: center;
 }
 
+#stayingsane {
+    background-color: #f8f8f8;
+}
+
 .newgif {
     float: left;
-    display: inline-block;
-    margin: 10px;
+    margin: 5px;
 }
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    margin-top: 10px;
+    flex: 1 0 auto;
+  }
+
+  #chuckjoke {
+    font-family: chuck;  
+    border: solid 1px #b71c1c;
+    padding: 0, 10px;
+  }
+
+#addgif {
+    color: white;
+} 
