@@ -34,7 +34,7 @@ $(document).ready(function(){
     console.log(response);
   });
 
-var gifArray = ['Cats', 'Animals', 'Monkeys', 'Boredom'];
+var gifArray = ['Cats', 'Animals', 'Monkeys Dancing', 'Boredom'];
 var chuckAPI = "https://api.chucknorris.io/jokes/random";
 
 $(document).ready(function() {
@@ -76,7 +76,7 @@ $(document).ready(function() {
 	function displayGif() {
 		$('#gifshere').empty();
 		var gifName = $(this).attr("data");
-		var gifAPI = 'https://api.giphy.com/v1/gifs/search?q= ' + gifName + ' &api_key=zQ9cvPUPVYGG0yHzaLmUuFwz7v7Iq5zi&limit=10'
+		var gifAPI = 'https://api.giphy.com/v1/gifs/search?q= ' + gifName + ' &api_key=zQ9cvPUPVYGG0yHzaLmUuFwz7v7Iq5zi&limit=5'
 		$.ajax({
 			url: gifAPI,
 			type: "GET"

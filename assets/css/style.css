@@ -35,3 +35,9 @@ nav{
 p {
     text-align: center;
 }
+
+.newgif {
+    float: left;
+    display: inline-block;
+    margin: 10px;
+}
