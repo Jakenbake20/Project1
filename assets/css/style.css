@@ -12,14 +12,11 @@ nav{
     height:100vh;
 }
 
-.newgif {
-    float: left;
-    display: inline-block;
-    margin: 10px;
+.header {
+    text-align: center;
+
 }
-.cdcbtn{
-    background-color:rebeccapurple;
-}
-.colormefooter{
-    background-color: rebeccapurple;
+
+p {
+    text-align: center;
 }
