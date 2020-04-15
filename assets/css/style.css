@@ -16,11 +16,13 @@ nav{
     text-align: center;
 
 }
-<<<<<<< HEAD
+
 .colormefooter{
     background-color: rebeccapurple;
 }
-
+.symptom{
+    list-style-type: initial;
+}
 #monster {
   position: absolute;
   left: 0px;
@@ -28,10 +30,8 @@ nav{
   z-index: -1;
   width: auto;
   height: 30em;
-  
-=======
+}
 
 p {
     text-align: center;
->>>>>>> 76d47e6daaffbfbfff57e6d49dbee804c1aa58e8
 }
