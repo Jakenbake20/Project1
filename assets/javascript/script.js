@@ -6,6 +6,10 @@ $(document).ready(function(){
   $(document).ready(function(){
     $('.parallax').parallax();
   });
+  // Initalizes modals
+  $(document).ready(function(){
+    $('.modal').modal();
+  });
 
 var chuckAPI = "https://api.chucknorris.io/jokes/random";
 var gifArray = ['Cats', 'Animals', 'Monkeys', 'Boredom']
