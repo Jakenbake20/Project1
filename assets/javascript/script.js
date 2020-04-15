@@ -90,7 +90,7 @@ $(document).ready(function() {
 				' " data-animate=" ' + response.data[i].images.fixed_height.url + '" data-state="still" class="movImage responsive-img">';
 	
 			var imageF = $('<div class="newgif hoverable">').html(image);
-			$('#gifshere').append(imageF);
+			$(imageF).appendTo('#gifshere');
 		}
 			$('.newgif').wrapAll("<div class=ng2 />")
 		$('.movImage').on('click', function() {
