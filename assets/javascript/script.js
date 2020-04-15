@@ -26,7 +26,7 @@ $(document).ready(function(){
     console.log(response);
   });
 
-var gifArray = ['Cats', 'Animals', 'Monkeys', 'Boredom'];
+var gifArray = ['Cats', 'Animals', 'Monkeys Dancing', 'Boredom'];
 var chuckAPI = "https://api.chucknorris.io/jokes/random";
 
 $(document).ready(function() {
