@@ -69,14 +69,15 @@ $(document).ready(function() {
 	$("#add-item").on("click", function(event) {
 		event.preventDefault();
 		var newInput = $("#input").val();
-		gifArray.push(newInput);
-		createButtons()
+		displayGif()
+		
 	})
 	//pulls and display's gifs
 	function displayGif() {
 		$('#gifshere').empty();
 		var gifName = $(this).attr("data");
-		var gifAPI = 'https://api.giphy.com/v1/gifs/search?q= ' + gifName + ' &api_key=zQ9cvPUPVYGG0yHzaLmUuFwz7v7Iq5zi&limit=5'
+		var newInput = $("#input").val();
+		var gifAPI = 'https://api.giphy.com/v1/gifs/search?q= ' + (gifName || newInput) + ' &api_key=zQ9cvPUPVYGG0yHzaLmUuFwz7v7Iq5zi&limit=5'
 		$.ajax({
 			url: gifAPI,
 			type: "GET"
@@ -88,7 +89,7 @@ $(document).ready(function() {
 				'" data-still=" ' + response.data[i].images.fixed_height_still.url +
 				' " data-animate=" ' + response.data[i].images.fixed_height.url + '" data-state="still" class="movImage">';
 	
-			image = '<div class="newgif">' + image + "</div>";
+			image = '<div class="newgif hoverable">' + image + "</div>";
 			$('#gifshere').prepend(image);
 		}
 	
@@ -103,7 +104,7 @@ $(document).ready(function() {
 			}
 	
 		});
-		
+		$("#input").empty();
 	});
 	}
 	
