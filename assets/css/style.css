@@ -97,6 +97,10 @@ main {
     height: max-content;
 }
 
+#pexercise {
+    background-color: lightgrey;
+}
+
 #addgif {
     color: white;
 } 
