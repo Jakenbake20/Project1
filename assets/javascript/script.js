@@ -110,7 +110,15 @@ $(document).ready(function() {
 	$(document).on("click", ".gifbutton", displayGif);
 		
 			createButtons()
-	});
+	
+$(document).ready(function(){
+	$('.carousel').carousel();
+});
+	
+	
+	
+	
+});
 
  
     
