@@ -80,3 +80,23 @@ main {
     height: max-content;
 }
 
+<<<<<<< HEAD
+#addgif {
+    color: white;
+} 
+
+label {
+    margin-left: 20%;
+    width: 60%;
+    font-size: 20px;
+    color: black;
+}
+
+select {
+    margin-top: 10px;
+    margin-left: 20%;
+    width: 60%;
+  
+}
+=======
+>>>>>>> 4f5b340bde603de558b6ca9a6b8312ce671de632
