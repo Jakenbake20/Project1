@@ -18,6 +18,9 @@ $(document).ready(function(){
   $.ajax(news).done(function(response) {
     console.log(response);
   });
+
+  var numResults ="";
+  var articleCounter = 0;
   
   var settings = {
     "async": true,
