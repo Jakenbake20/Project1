@@ -58,19 +58,29 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-  }
+}
 
-  main {
+main {
     margin-top: 10px;
     flex: 1 0 auto;
-  }
+}
 
-  #chuckjoke {
+#chuckjoke {
     font-family: chuck;  
     border: solid 1px #b71c1c;
     padding: 0, 10px;
-  }
+}
 
+.exercise {
+    height: 300px;
+}
+
+.carousel-item {
+    width: max-content;
+    height: max-content;
+}
+
+<<<<<<< HEAD
 #addgif {
     color: white;
 } 
@@ -88,3 +98,5 @@ select {
     width: 60%;
   
 }
+=======
+>>>>>>> 4f5b340bde603de558b6ca9a6b8312ce671de632
