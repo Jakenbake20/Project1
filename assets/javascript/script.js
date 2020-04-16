@@ -11,31 +11,36 @@ $(document).ready(function(){
     $('.modal').modal();
   });
 
-  var news= {
-    "url": "https://covidtracking.com/api/press",
-    "method": "GET",
-    }
-  $.ajax(news).done(function(response) {
-    console.log(response);
-  });
+//   var news= {
+//     "url": "https://covidtracking.com/api/press",
+//     "method": "GET",
+//     }
+//   $.ajax(news).done(function(response) {
+//     console.log(response);
+//   });
+var numResults ="";
 
-  var numResults ="";
+var queryURLBase = "https://covidtracking.com/api/press"
+
+function runQuery(numArticles, queryURL){
+
+	$.ajax({url: queryURL, method: "GET"})
+		.done(function(press) {
+			console.log(queryURL);
+			console.log(press);
+		})
+}
+
+$('#submit').on('click', function() {
+
+	// alert("test");
+	runQuery(10, "https://covidtracking.com/api/press");
+})
+
+
+ 
   var articleCounter = 0;
   
-  var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://covid-19-data.p.rapidapi.com/totals?format=undefined",
-    "method": "GET",
-    "headers": {
-      "x-rapidapi-host": "covid-19-data.p.rapidapi.com",
-      "x-rapidapi-key": "08897b03bcmshc81efaa969f609ap1c87cdjsn9def16cda817"
-    }
-  }
-  
-  $.ajax(settings).done(function (response) {
-    console.log(response);
-  });
 
 var gifArray = ['Cats', 'Animals', 'Monkeys Dancing', 'Boredom'];
 var chuckAPI = "https://api.chucknorris.io/jokes/random";
