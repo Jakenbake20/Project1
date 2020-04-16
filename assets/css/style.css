@@ -58,6 +58,8 @@ p {
 
 #submit {
     background-color: purple;
+    opacity: 80%;
+    font-size: 16px;
 }
 
 #stayingsane {
