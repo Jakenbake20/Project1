@@ -18,6 +18,8 @@ nav{
 
 .header {
     text-align: center;
+    border-bottom: solid thin black;
+    padding-bottom: 10px;
 
 }
 
@@ -43,6 +45,19 @@ nav{
 
 p {
     text-align: center;
+}
+
+#pp{
+    font-style: italic;
+}
+
+#titles {
+    margin-bottom: 10px;
+    background-color: lightgray;
+}
+
+#submit {
+    background-color: purple;
 }
 
 #stayingsane {
@@ -80,7 +95,6 @@ main {
     height: max-content;
 }
 
-<<<<<<< HEAD
 #addgif {
     color: white;
 } 
@@ -98,5 +112,5 @@ select {
     width: 60%;
   
 }
-=======
->>>>>>> 4f5b340bde603de558b6ca9a6b8312ce671de632
+
+
