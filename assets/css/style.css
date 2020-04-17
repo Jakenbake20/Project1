@@ -60,6 +60,8 @@ p {
     background-color: purple;
     opacity: 80%;
     font-size: 16px;
+    float: right;
+    margin-right: 7 %;
 }
 
 #stayingsane {
