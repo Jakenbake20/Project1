@@ -84,6 +84,7 @@ main {
     flex: 1 0 auto;
 }
 
+
 #chuckjoke {
     font-family: chuck;  
     border: solid 1px #b71c1c;
@@ -120,5 +121,16 @@ select {
     width: 60%;
   
 }
-
-
+.pigeon {
+    color: white;
+  }
+  .container5 {
+    padding: 10px 10px 10px 10px;
+  }
+  .contactform{
+      margin-left:50px;
+      margin-right:50px;
+  }
+.contactinput{
+    margin:0px;
+}
