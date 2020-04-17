@@ -11,31 +11,49 @@ $(document).ready(function(){
     $('.modal').modal();
   });
 
-//   var news= {
-//     "url": "https://covidtracking.com/api/press",
-//     "method": "GET",
-//     }
-//   $.ajax(news).done(function(response) {
-//     console.log(response);
-//   });
-var numResults ="";
 
-var queryURLBase = "https://covidtracking.com/api/press"
+  $('#submit').on('click', function() { 
+  var news= {
+    "url": "https://covidtracking.com/api/press",
+    "method": "GET",
+    }
+  $.ajax(news).done(function(response) {
+	console.log(response);
 
-function runQuery(numArticles, queryURL){
+	var nDiv = $("<div id='nDiv'>");
 
-	$.ajax({url: queryURL, method: "GET"})
-		.done(function(press) {
-			console.log(queryURL);
-			console.log(press);
-		})
-}
+	var title = response[0].title;
+	console.log(title);
+	var titleP = $("<h4>").text(title);
+  })
+});
+// var numResults = "";
 
-$('#submit').on('click', function() {
+// var queryURLBase = "https://covidtracking.com/api/press"
 
-	// alert("test");
-	runQuery(10, "https://covidtracking.com/api/press");
-})
+// function runQuery(numArticles, queryURL){
+
+// 	$.ajax({url: queryURL, method: "GET"})
+// 		.done(function(press) {
+
+// 			// console.log(response);
+
+// 			//troubleshooting
+// 			console.log(queryURL);
+// 			console.log(numArticles);
+// 			console.log(press);
+// 		})
+// }
+
+
+// $('#submit').on('click', function() {
+// 	numResults = $("#articles").val();
+// 	console.log(response[0].author);
+
+// 	// alert("test");
+
+// 	// runQuery(numResults, queryURLBase);
+// })
 
 
  
@@ -66,8 +84,8 @@ $(document).ready(function() {
 	
 		for(var i = 0; i < gifArray.length; i++) {
 		
-			var newButton = $("<button>");
-			newButton.addClass("gifbutton waves-effect waves-light red darken-4 btn");
+			var newButton = $("<button id='giflist'>");
+			newButton.addClass("gifbutton waves-effect waves-light btn");
 			newButton.attr("data", gifArray[i]);
 			newButton.text(gifArray[i]);
 			$("#buttons").append(newButton);
@@ -85,7 +103,7 @@ $(document).ready(function() {
 		$('#gifshere').empty();
 		var gifName = $(this).attr("data");
 		var newInput = $("#input").val();
-		var gifAPI = 'https://api.giphy.com/v1/gifs/search?q= ' + (gifName || newInput) + ' &api_key=zQ9cvPUPVYGG0yHzaLmUuFwz7v7Iq5zi&limit=5'
+		var gifAPI = 'https://api.giphy.com/v1/gifs/search?q= ' + (gifName || newInput) + ' &api_key=zQ9cvPUPVYGG0yHzaLmUuFwz7v7Iq5zi&limit=10'
 		$.ajax({
 			url: gifAPI,
 			type: "GET"
