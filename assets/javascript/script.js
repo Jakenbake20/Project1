@@ -146,9 +146,8 @@ $(document).ready(function(){
 	
 });
 //contact form message 
-$('#textarea1').val('New Text');
-M.textareaAutoResize($('#textarea1'));
 
+newContact =[];
 
 var firebaseConfig = {
     apiKey: "AIzaSyBe8XrpsjsmnRjLpwMC3srwIyCRytawPYA",
@@ -162,28 +161,12 @@ var firebaseConfig = {
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-
-  database.ref().on(
-	"child_added",
-	function (childSnapshot) {
-	  
-	
-  
-	  // If any errors are experienced, log them to console.
-	},
-	function (errorObject) {
-	  console.log("The read failed: " + errorObject.code);
-	}
-  );
-  
+  database=firebase.database();
   $("#submitThisForm").on("click", function () {
-	event.preventDefault();
-  
 	newContact.firstName = $("#first_name").val();
 	newContact.lastName = $("#last_name").val();
 	newContact.email = $("#email").val();
 	newContact.message = $("#messageinput").val();
   
-	database.ref().push(newTrain);
+	database.ref().push(newContact);
   });
