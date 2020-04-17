@@ -69,7 +69,7 @@ $(document).ready(function() {
 		url: chuckAPI,
 		type: "GET"
 	}).done(function(response){
-		console.log(response);
+		// console.log(response);
 		var newChuck = $("<div id='chuckjoke'>");
 		var joke = response.value;
 		var pJoke = $("<p>").html(joke);
@@ -145,9 +145,45 @@ $(document).ready(function(){
 	
 	
 });
-
+//contact form message 
 $('#textarea1').val('New Text');
 M.textareaAutoResize($('#textarea1'));
- 
-    
- 
+
+
+var firebaseConfig = {
+    apiKey: "AIzaSyBe8XrpsjsmnRjLpwMC3srwIyCRytawPYA",
+    authDomain: "addisons-project.firebaseapp.com",
+    databaseURL: "https://addisons-project.firebaseio.com",
+    projectId: "addisons-project",
+    storageBucket: "addisons-project.appspot.com",
+    messagingSenderId: "701418838456",
+    appId: "1:701418838456:web:a773fdcdbace7ecd33174d",
+    measurementId: "G-G9BSS3GDKN"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+  database.ref().on(
+	"child_added",
+	function (childSnapshot) {
+	  
+	
+  
+	  // If any errors are experienced, log them to console.
+	},
+	function (errorObject) {
+	  console.log("The read failed: " + errorObject.code);
+	}
+  );
+  
+  $("#submitThisForm").on("click", function () {
+	event.preventDefault();
+  
+	newContact.firstName = $("#first_name").val();
+	newContact.lastName = $("#last_name").val();
+	newContact.email = $("#email").val();
+	newContact.message = $("#messageinput").val();
+  
+	database.ref().push(newTrain);
+  });
