@@ -61,7 +61,7 @@ p {
     opacity: 80%;
     font-size: 16px;
     float: right;
-    margin-right: 7 %;
+    margin-right: 7%;
 }
 
 #stayingsane {
@@ -83,10 +83,13 @@ main {
     flex: 1 0 auto;
 }
 
+<<<<<<< HEAD
 #ssane {
     background-color: #338088;
     margin-bottom: 0;
 }
+=======
+>>>>>>> dc3c8ea0251fcc591accbbbc22271952c21e3829
 
 #chuckjoke {
     font-family: chuck;  
@@ -135,5 +138,16 @@ select {
     width: 60%;
   
 }
-
-
+.pigeon {
+    color: white;
+  }
+  .container5 {
+    padding: 10px 10px 10px 10px;
+  }
+  .contactform{
+      margin-left:50px;
+      margin-right:50px;
+  }
+.contactinput{
+    margin:0px;
+}
