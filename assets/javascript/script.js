@@ -11,31 +11,49 @@ $(document).ready(function(){
     $('.modal').modal();
   });
 
-//   var news= {
-//     "url": "https://covidtracking.com/api/press",
-//     "method": "GET",
-//     }
-//   $.ajax(news).done(function(response) {
-//     console.log(response);
-//   });
-var numResults ="";
 
-var queryURLBase = "https://covidtracking.com/api/press"
+  $('#submit').on('click', function() { 
+  var news= {
+    "url": "https://covidtracking.com/api/press",
+    "method": "GET",
+    }
+  $.ajax(news).done(function(response) {
+	console.log(response);
 
-function runQuery(numArticles, queryURL){
+	var nDiv = $("<div id='nDiv'>");
 
-	$.ajax({url: queryURL, method: "GET"})
-		.done(function(press) {
-			console.log(queryURL);
-			console.log(press);
-		})
-}
+	var title = response[0].title;
+	console.log(title);
+	var titleP = $("<h4>").text(title);
+  })
+});
+// var numResults = "";
 
-$('#submit').on('click', function() {
+// var queryURLBase = "https://covidtracking.com/api/press"
 
-	// alert("test");
-	runQuery(10, "https://covidtracking.com/api/press");
-})
+// function runQuery(numArticles, queryURL){
+
+// 	$.ajax({url: queryURL, method: "GET"})
+// 		.done(function(press) {
+
+// 			// console.log(response);
+
+// 			//troubleshooting
+// 			console.log(queryURL);
+// 			console.log(numArticles);
+// 			console.log(press);
+// 		})
+// }
+
+
+// $('#submit').on('click', function() {
+// 	numResults = $("#articles").val();
+// 	console.log(response[0].author);
+
+// 	// alert("test");
+
+// 	// runQuery(numResults, queryURLBase);
+// })
 
 
  
