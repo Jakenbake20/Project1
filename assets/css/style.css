@@ -80,14 +80,28 @@ body {
 }
 
 main {
-    margin-top: 10px;
     flex: 1 0 auto;
+}
+
+#ssane {
+    background-color: #338088;
+    margin-bottom: 0;
 }
 
 #chuckjoke {
     font-family: chuck;  
-    border: solid 1px #b71c1c;
+    border: solid 1px #883c33;
     padding: 0, 10px;
+    font-size: 1.5vw;
+}
+
+#gif {
+    font-size: 100px;
+    color: #883c33;
+}
+
+#peh {
+    margin-top: 0;
 }
 
 .exercise {
@@ -103,8 +117,9 @@ main {
     background-color: lightgrey;
 }
 
-#addgif {
+#addgif, #giflist {
     color: white;
+    background: #883c33;
 } 
 
 label {
