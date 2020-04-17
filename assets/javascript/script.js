@@ -84,8 +84,8 @@ $(document).ready(function() {
 	
 		for(var i = 0; i < gifArray.length; i++) {
 		
-			var newButton = $("<button>");
-			newButton.addClass("gifbutton waves-effect waves-light red darken-4 btn");
+			var newButton = $("<button id='giflist'>");
+			newButton.addClass("gifbutton waves-effect waves-light btn");
 			newButton.attr("data", gifArray[i]);
 			newButton.text(gifArray[i]);
 			$("#buttons").append(newButton);
@@ -103,7 +103,7 @@ $(document).ready(function() {
 		$('#gifshere').empty();
 		var gifName = $(this).attr("data");
 		var newInput = $("#input").val();
-		var gifAPI = 'https://api.giphy.com/v1/gifs/search?q= ' + (gifName || newInput) + ' &api_key=zQ9cvPUPVYGG0yHzaLmUuFwz7v7Iq5zi&limit=5'
+		var gifAPI = 'https://api.giphy.com/v1/gifs/search?q= ' + (gifName || newInput) + ' &api_key=zQ9cvPUPVYGG0yHzaLmUuFwz7v7Iq5zi&limit=10'
 		$.ajax({
 			url: gifAPI,
 			type: "GET"
