@@ -90,36 +90,50 @@ main {
 
 #chuckjoke {
     font-family: chuck;  
-    border: solid 1px #883c33;
-    padding: 0, 10px;
+    border: solid 2px #883c33;
+    padding: 0, 15;
     font-size: 1.5vw;
 }
 
 #gif {
-    font-size: 100px;
+    font-size: 5vw;
     color: #883c33;
+}
+
+#newinput{
+    margin-left: 0;
+}
+
+.top1 {
+    font-size: 4vw;
+}
+.top2 {
+    font-size: 1.25vw;
 }
 
 #peh {
     margin-top: 0;
 }
 
-.exercise {
-    height: 300px;
+.carousel {
+    height: 600px;
+    perspective: 1000px;
 }
 
-.carousel-item {
-    width: max-content;
-    height: max-content;
+.carousel .carousel-item {
+    left: -200px;
 }
-
+.carousel .carousel-item>img{
+   width: 300%;
+}
 #pexercise {
     background-color: lightgrey;
 }
 
-#addgif, #giflist {
+#addGif, #giflist {
     color: white;
-    background: #883c33;
+    background-color: #883c33;
+    font-size: 16px;
 } 
 
 label {
