@@ -104,9 +104,28 @@ function updatePage(press) {
 
 var gifArray = ['Cats', 'Animals', 'Monkeys Dancing', 'Boredom'];
 var chuckAPI = "https://api.chucknorris.io/jokes/random?category=animal,career,celebrity,dev,fashion,food,history,money,movie,music,political,religion,science,sport,travel";
+var covidTracking = "http://covidtracking.com/api/us";
 
 $(document).ready(function() {
 	
+	function formatNumber(num) {
+		return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+	}
+	  
+	$.ajax({
+		url: covidTracking,
+		method: "GET"
+	}).done(function (response) {
+		console.log(response);
+		var positive = formatNumber(response[0].positive);
+		var death = formatNumber(response[0].death);
+		var recovered = formatNumber(response[0].recovered);
+		
+		$("#usa").append(positive);
+		$("#usaD").append(death);
+		$("#usaR").append(recovered);
+	});
+
 	$.ajax({
 		url: chuckAPI,
 		type: "GET"
