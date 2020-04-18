@@ -30,7 +30,7 @@ $('#submit').on('click', function() {
 
 	
 		var nDiv = $("<div id='nDiv'>");
-		
+
 		var title = response[i].title;
 			console.log(title);
 			console.log("---------------------------------");
@@ -59,17 +59,12 @@ $('#submit').on('click', function() {
 
 		var linkP =$("<a href=' "+ response[i].url + "'>"+response[i].url + "</a>");
 
-		nDiv.append(titleP, authorP, dateP, linkP);
-
-		$("#titles").html(nDiv);
-//-------------------------------------------------------------------
-
-		
+		$("#titles").append(titleP, authorP, dateP, linkP);	
 	}
   })
 });
 
-  
+
 
 var gifArray = ['Cats', 'Animals', 'Monkeys Dancing', 'Boredom'];
 var chuckAPI = "https://api.chucknorris.io/jokes/random?category=animal,career,celebrity,dev,fashion,food,history,money,movie,music,political,religion,science,sport,travel";

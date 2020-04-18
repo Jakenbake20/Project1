@@ -25,7 +25,7 @@
     <!-- NavBar and Collapsed Nav Menu -->
     <nav class="colormenav">
       <div class="nav-wrapper">
-        <a href="index.html" class="brand-logo">Pandemic Planet</a>
+        <a href="index.html" class="brand-logo" id="logo">Pandemic Planet <i class="material-icons right">public</i></a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"
           ><i class="material-icons">menu</i></a
         >
@@ -58,14 +58,14 @@
       </div>
 
       <div class="row container"> 
-          <label syle= "font-size:20px">Number of articles</label>
+          <label syle= "font-size:20px">Number of articles you wish to view</label>
           <select class="browser-default" id="articles">
             <option id ="number" value="1">1</option>
             <option id ="number" value="5" selected>5</option>
             <option id ="number" value="10">10</option>
           </select>
           <br><br>
-          
+
           <div class ="secton-white">
             <div class="row container">
             <button class="btn waves-effect waves-light" id="submit" type="submit" name="action">Submit
@@ -73,6 +73,15 @@
             </button>
             </div>
           </div>  
+
+          <div class ="secton-white">
+            <div class="row container">
+            <button class="btn waves-effect waves-light" id="clear" type="clear" name="action"> &nbsp;clear&nbsp; 
+              <i class="material-icons right">refresh</i>
+            </button>
+            </div>
+          </div>
+
 
           <div class="section" id="titles">
             <div class="row container">

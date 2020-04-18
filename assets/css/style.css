@@ -53,6 +53,18 @@ p {
   background-color: lightgray;
 }
 
+#clear {
+    background-color: purple;
+    opacity: 80%;
+    font-size: 16px;
+    float: right;
+    margin-right: 7%;
+}
+
+#logo {
+    text-shadow: 2px 2px 4px #000000;
+}
+
 #submit {
   background-color: purple;
   opacity: 80%;
