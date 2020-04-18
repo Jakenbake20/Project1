@@ -1,37 +1,34 @@
 @font-face {
-    font-family: chuck;
-    src: url(../fonts/bohemian-typewriter/Bohemian\ Typewriter.ttf)
+  font-family: chuck;
+  src: url(../fonts/bohemian-typewriter/Bohemian\Typewriter.ttf);
 }
-nav{
-    background-color:rebeccapurple;
-    padding-left:50px;
-    padding-right:50px;
+nav {
+  background-color: rebeccapurple;
+  padding-left: 50px;
+  padding-right: 50px;
 }
-.sidebar{
-    
-    height:100vh;
-    
+.sidebar {
+  height: 100vh;
 }
-.contentbody{
-    height: auto;
+.contentbody {
+  height: auto;
 }
 
 .header {
-    text-align: center;
-    border-bottom: solid thin black;
-    padding-bottom: 10px;
-
+  text-align: center;
+  border-bottom: solid thin black;
+  padding-bottom: 10px;
 }
 
-.colormefooter{
-    background-color: rebeccapurple;
+.colormefooter {
+  background-color: rebeccapurple;
 }
 
 .symptom {
-    list-style-type: space-counter;
-    font-weight: bold;
-    color: #b71c1c;
-    text-align: center;
+  list-style-type: space-counter;
+  font-weight: bold;
+  color: #b71c1c;
+  text-align: center;
 }
 
 #monster {
@@ -44,136 +41,164 @@ nav{
 }
 
 p {
-    text-align: center;
+  text-align: center;
 }
 
-#pp{
-    font-style: italic;
+#pp {
+  font-style: italic;
 }
 
 #titles {
-    margin-bottom: 10px;
-    background-color: lightgray;
+  margin-bottom: 10px;
+  background-color: lightgray;
 }
 
 #submit {
-    background-color: purple;
-    opacity: 80%;
-    font-size: 16px;
-    float: right;
-    margin-right: 7%;
+  background-color: purple;
+  opacity: 80%;
+  font-size: 16px;
+  float: right;
+  margin-right: 7%;
 }
 
 #stayingsane {
-    background-color: #f8f8f8;
+  background-color: #f8f8f8;
 }
 
 .newgif {
-    float: left;
-    margin: 5px;
+  float: left;
+  margin: 5px;
 }
 
 body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 main {
-    flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 
 #ssane {
-    background-color: #338088;
-    margin-bottom: 0;
+  background-color: #338088;
+  margin-bottom: 0;
 }
 
 #chuckjoke {
-    font-family: chuck;  
-    border: solid 2px #883c33;
-    padding: 0, 15;
-    font-size: 1.5vw;
+  font-family: chuck;
+  border: solid 2px #883c33;
+  padding: 0, 15;
+  font-size: 1.5vw;
 }
 
 #gif {
-    font-size: 5vw;
-    color: #883c33;
+  font-size: 5vw;
+  color: #883c33;
 }
 
-#newinput{
-    margin-left: 0;
+#newinput {
+  margin-left: 0;
 }
 
 .top1 {
-    font-size: 4vw;
+  font-size: 4vw;
 }
 .top2 {
-    font-size: 1.25vw;
+  font-size: 1.25vw;
 }
 
 #peh {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .carousel {
-    height: 600px;
-    perspective: 1000px;
+  height: 600px;
+  perspective: 1000px;
 }
 
 .carousel .carousel-item {
-    left: -200px;
+  left: -200px;
 }
-.carousel .carousel-item>img{
-   width: 300%;
+.carousel .carousel-item > img {
+  width: 300%;
 }
 #pexercise {
-    background-color: lightgrey;
+  background-color: lightgrey;
 }
 
-#addGif, #giflist, #cdc, #submitThisForm {
+
+#addGif,
+#giflist, 
+#cdc, 
+#submitThisForm {
     color: white;
     background-color: #883c33;
     font-size: 16px;
 } 
 
+
 table {
-    font-size: 2vw;
+  font-size: 2vw;
 }
 
 th {
-    font-size: 3vw;
+  font-size: 3vw;
 }
 #usaD {
-    color: red;
+  color: red;
 }
 
 #usaR {
-    color: green;
+  color: green;
 }
 
 label {
-    margin-left: 20%;
-    width: 60%;
-    font-size: 20px;
-    color: black;
+  margin-left: 20%;
+  width: 60%;
+  font-size: 20px;
+  color: black;
 }
 
 select {
-    margin-top: 10px;
-    margin-left: 20%;
-    width: 60%;
-  
+  margin-top: 10px;
+  margin-left: 20%;
+  width: 60%;
 }
 .pigeon {
-    color: white;
-  }
-  .container5 {
-    padding: 10px 10px 10px 10px;
-  }
-  .contactform{
-      margin-left:50px;
-      margin-right:50px;
-  }
-.contactinput{
-    margin:0px;
+  color: white;
+}
+.container5 {
+  padding: 10px 10px 10px 10px;
+}
+.contactform {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.contactinput {
+  margin: 0px;
+}
+.monstercan1 {
+  height: 450px;
+  width: 300px;
+  padding-right: 20px;
+}
+.monstercan2 {
+  height: 450px;
+  width: 300px;
+}
+.contentbody {
+  color: white;
+  margin-left: 20px;
+  text-align: center;
+}
+.monsterbody {
+  background-color: black;
+}
+.monsterbttn {
+  height: 100px;
+  width: 100px;
+}
+.modal {
+  color: black;
 }
