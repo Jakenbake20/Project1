@@ -48,9 +48,29 @@ p {
   font-style: italic;
 }
 
+#link {
+    font-size: 16px;
+}
+
 #titles {
   margin-bottom: 10px;
-  background-color: lightgray;
+  padding: 2%;
+  background-color: teal;
+  text-align: center;
+  color: white;
+  display: none;
+}
+
+#clear {
+    background-color: purple;
+    opacity: 80%;
+    font-size: 16px;
+    float: right;
+    margin-right: 7%;
+}
+
+#logo {
+    text-shadow: 2px 2px 4px #000000;
 }
 
 #submit {
@@ -79,6 +99,7 @@ body {
 main {
   flex: 1 0 auto;
 }
+
 
 #ssane {
   background-color: #338088;
@@ -202,3 +223,7 @@ select {
 .modal {
   color: black;
 }
+
+
+
+

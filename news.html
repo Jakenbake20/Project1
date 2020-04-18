@@ -25,7 +25,7 @@
     <!-- NavBar and Collapsed Nav Menu -->
     <nav class="colormenav">
       <div class="nav-wrapper">
-        <a href="index.html" class="brand-logo">Pandemic Planet</a>
+        <a href="index.html" class="brand-logo" id="logo">Pandemic Planet <i class="material-icons right">public</i></a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"
           ><i class="material-icons">menu</i></a
         >
@@ -45,27 +45,26 @@
 
     <div class="parallax-container">
       <div class="parallax">
-        <img id= "newsLogo" src="assets/images/News.jpg"/>
+        <img src="assets/images/News.jpg"/>
       </div>
     </div>
     <div class="section white">
       <div class="row container">
         <h2 class="header">Get your latest Covid-19 news here!</h2>
         <p class="grey-text text-darken-3 lighten-3" id= "pp">
-          <!-- replace this text to add content -->
             At Pandemic Planet we pride ourselves with providing you our most up to date news sources. 
         </p>
       </div>
 
       <div class="row container"> 
-          <label syle= "font-size:20px">Number of articles</label>
+          <label syle= "font-size:20px">Number of articles you wish to view</label>
           <select class="browser-default" id="articles">
             <option id ="number" value="1">1</option>
             <option id ="number" value="5" selected>5</option>
             <option id ="number" value="10">10</option>
           </select>
           <br><br>
-          
+
           <div class ="secton-white">
             <div class="row container">
             <button class="btn waves-effect waves-light" id="submit" type="submit" name="action">Submit
@@ -74,7 +73,16 @@
             </div>
           </div>  
 
-          <div class="section" id="titles">
+          <div class ="secton-white">
+            <div class="row container">
+            <button class="btn waves-effect waves-light" id="clear"  value="reset" type="reset"> &nbsp;clear&nbsp; 
+              <i class="material-icons right">refresh</i>
+            </button>
+            </div>
+          </div>
+
+
+          <div class="section" id="titles" value="reset">
             <div class="row container">
               <h4 id = "Hline"></h4>
               <h5 id = "author"></h5>
