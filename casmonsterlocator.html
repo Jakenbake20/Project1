@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Monster Locator</title>
-    <link rel="shorcut icon" href="assets/images/monster.png" type="image/x-icon" />
+    <link
+      rel="shorcut icon"
+      href="assets/images/monster.png"
+      type="image/x-icon"
+    />
     <link
       rel="stylesheet"
       type="text/css"
@@ -19,8 +23,8 @@
     ></script>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
   </head>
-  <body>
-      <!-- NavBar and Collapsed Nav Menu -->
+  <body class="monsterbody">
+    <!-- NavBar and Collapsed Nav Menu -->
     <nav class="colormenav">
       <div class="nav-wrapper">
         <a href="#!" class="brand-logo">Monster Tracker</a>
@@ -36,34 +40,55 @@
     </nav>
 
     <ul class="sidenav" id="mobile-demo">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="stayingsane.html">Staying Sane</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="stayingsane.html">Staying Sane</a></li>
     </ul>
     <div class="row">
-        <div class="col s2 sidebar"></div>
-        <div class="col s8 contentbody">
-          <img id="monster" src="assets/images/monsterlogo.png"/>
-    
-    <!-- content goes here -->
-            <h1>Cas's</s> Monster Locator!</h1>
-            <h6>For Cas Wolff only!</h6>
-            <h3>Click the button to locate the nearest monster!</h3>
-            <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Locate</a>
+      <div class="col s2 sidebar">
+        <img
+          class="monstercan1"
+          src="assets/images/image-asset.jpeg"
+          alt="monstercan"
+        />
+      </div>
+      <div class="col s8 contentbody">
+        <!-- <img id="monster" src="assets/images/monsterlogo.png"/> -->
 
+        <!-- content goes here -->
+        <h1>Cas's Monster Locator!</h1>
+        <h6>For Cas Wolff only!</h6>
+        <h3>Click the Monster logo to locate</h3>
+        <h3>the nearest monster!</h3>
+        <a class="modal-trigger" href="#modal1"
+          ><img
+            src="assets/images/monsterlogo.png"
+            class="monsterbttn"
+            alt="monsterlogo"
+        /></a>
 
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4>Your Monster is:</h4>
-      <p>Within 5 feet of you.</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
-    </div>
-  </div>
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+            <h4>Your Monster is:</h4>
+            <p>Within 5 feet of you.</p>
+          </div>
+          <div class="modal-footer">
+            <a
+              href="casmonsterlocator.html"
+              class="modal-close waves-effect waves-green btn-flat"
+              >Close</a
+            >
+          </div>
         </div>
-        <div class="col s2 sidebar"></div>
+      </div>
+      <div class="col s2 sidebar">
+        <img
+          class="monstercan2"
+          src="assets/images/image-asset.jpeg"
+          alt="monstercan"
+        />
+      </div>
     </div>
     <footer class="page-footer colormefooter">
       <div class="container">
@@ -74,23 +99,34 @@
               <li>Jordan C.</li>
               <li>Jacob W.</li>
               <li>Addison N.</li>
-            </ul>        
-          
+            </ul>
           </div>
           <div class="col l4 offset-l2 s12">
             <h5 class="white-text">Links</h5>
             <ul>
-              <li><a class="grey-text text-lighten-3" href="news.html">News</a></li>
-              <li><a class="grey-text text-lighten-3" href="stayingsane.html">Staying Sane</a></li>
-              <li><a class="grey-text text-lighten-3" href="index.html">Home</a></li>
-              <li><a class="grey-text text-lighten-3" href="contact.html">Contact Us</a></li>
+              <li>
+                <a class="grey-text text-lighten-3" href="news.html">News</a>
+              </li>
+              <li>
+                <a class="grey-text text-lighten-3" href="stayingsane.html"
+                  >Staying Sane</a
+                >
+              </li>
+              <li>
+                <a class="grey-text text-lighten-3" href="index.html">Home</a>
+              </li>
+              <li>
+                <a class="grey-text text-lighten-3" href="contact.html"
+                  >Contact Us</a
+                >
+              </li>
             </ul>
           </div>
         </div>
       </div>
       <div class="footer-copyright">
         <div class="container">
-        © 2014 Copyright Totally Real Company LLC
+          © 2014 Copyright Totally Real Company LLC
         </div>
       </div>
     </footer>
