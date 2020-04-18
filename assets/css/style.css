@@ -127,12 +127,16 @@ main {
   background-color: lightgrey;
 }
 
+
 #addGif,
-#giflist {
-  color: white;
-  background-color: #883c33;
-  font-size: 16px;
-}
+#giflist, 
+#cdc, 
+#submitThisForm {
+    color: white;
+    background-color: #883c33;
+    font-size: 16px;
+} 
+
 
 table {
   font-size: 2vw;
