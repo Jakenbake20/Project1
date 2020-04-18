@@ -73,7 +73,7 @@ $('#submit').on('click', function() {
 
 var gifArray = ['Cats', 'Animals', 'Monkeys Dancing', 'Boredom'];
 var chuckAPI = "https://api.chucknorris.io/jokes/random?category=animal,career,celebrity,dev,fashion,food,history,money,movie,music,political,religion,science,sport,travel";
-var covidTracking = "http://covidtracking.com/api/us";
+var covidTracking = "https://covidtracking.com/api/us";
 
 $(document).ready(function() {
 	
