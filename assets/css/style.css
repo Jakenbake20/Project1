@@ -1,6 +1,6 @@
 @font-face {
   font-family: chuck;
-  src: url(../fonts/bohemian-typewriter/Bohemian\Typewriter.ttf);
+  src: url(../fonts/bohemian-typewriter/Bohemian\ Typewriter.ttf);
 }
 nav {
   background-color: rebeccapurple;
@@ -111,6 +111,7 @@ main {
   border: solid 2px #883c33;
   padding: 0, 15;
   font-size: 1.5vw;
+  color: black;
 }
 
 #gif {
