@@ -11,7 +11,6 @@ $(document).ready(function(){
     $('.modal').modal();
   });
 
-
 var queryURL="https://covidtracking.com/api/press";
 var news= {
     "url": "https://covidtracking.com/api/press",
@@ -19,9 +18,9 @@ var news= {
     }
 $.ajax(news).done(function(response) {
 
-
 $('#submit').on('click', function() { 
 	// console.log(response);
+	$('#titles').show();
 
 	console.log("---------------------------------");
 	var numArticles = $("#articles").val();
@@ -36,21 +35,21 @@ $('#submit').on('click', function() {
 			console.log("---------------------------------");
 
 
-		var titleP = $("<h4 id = 'Hline'>").text(title);
+		var titleP = $("<h4 id = 'Hline'>").text("Title: "+ title);
 
 		var author = response[i].author;
 			console.log(author);
 			console.log("---------------------------------");
 
 
-		var authorP =$("<h5 id = 'author'>").text(author);
+		var authorP =$("<h5 id = 'author'>").text("Author: " + author);
 
 		var date = response[i].publishDate;
 			console.log(date);
 			console.log("---------------------------------");
 
 
-		var dateP =$("<h5 id = 'date'>").text(date)	
+		var dateP =$("<h5 id = 'date'>").text("Date: " + date)	
 
 		var link = response[i].url;
 			console.log(link);
@@ -59,11 +58,16 @@ $('#submit').on('click', function() {
 
 		var linkP =$("<a href=' "+ response[i].url + "'>"+response[i].url + "</a>");
 
-		$("#titles").append(titleP, authorP, dateP, linkP);	
+		$("#titles").append(titleP, authorP, dateP, linkP);		
 	}
   })
 });
 
+function clear(){
+	$("#titles").empty();
+	$("#titles").hide();
+}
+$("#clear").on("click", clear);
 
 
 var gifArray = ['Cats', 'Animals', 'Monkeys Dancing', 'Boredom'];

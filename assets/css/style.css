@@ -48,9 +48,17 @@ p {
   font-style: italic;
 }
 
+#link {
+    font-size: 16px;
+}
+
 #titles {
   margin-bottom: 10px;
-  background-color: lightgray;
+  padding: 2%;
+  background-color: teal;
+  text-align: center;
+  color: white;
+  display: none;
 }
 
 #clear {
@@ -91,6 +99,7 @@ body {
 main {
   flex: 1 0 auto;
 }
+
 
 #ssane {
   background-color: #338088;
@@ -214,3 +223,7 @@ select {
 .modal {
   color: black;
 }
+
+
+
+
