@@ -130,7 +130,7 @@ main {
     background-color: lightgrey;
 }
 
-#addGif, #giflist {
+#addGif, #giflist, #cdc, #submitThisForm {
     color: white;
     background-color: #883c33;
     font-size: 16px;
