@@ -12,94 +12,63 @@ $(document).ready(function(){
   });
 
 
-$('#submit').on('click', function() { 
+var queryURL="https://covidtracking.com/api/press";
 var news= {
     "url": "https://covidtracking.com/api/press",
     "method": "GET",
     }
 $.ajax(news).done(function(response) {
-	console.log(response);
 
-function updatePage(press) {
-	var numResults = $("#articles").val();
 
-	console.log(press);
+$('#submit').on('click', function() { 
+	// console.log(response);
 
-	for (var i=0; i < numResults; i++){
+	console.log("---------------------------------");
+	var numArticles = $("#articles").val();
 
-		var article = press.response;
-		
-		var articleCount = i+1;
+	for (var i = 0; i < numArticles; i++) {
 
-		var $articleList = $("<ul>");
-		$articleList.addClass("list-group");
-
-		$("titles").append($articleList);
-	}
-
-}
-
-	// runQuery(numResults, queryURLBase);
-
+	
 		var nDiv = $("<div id='nDiv'>");
-
-		var title = response[0].title;
+		
+		var title = response[i].title;
 			console.log(title);
+			console.log("---------------------------------");
+
 
 		var titleP = $("<h4 id = 'Hline'>").text(title);
 
-		var author = response[0].author;
+		var author = response[i].author;
 			console.log(author);
+			console.log("---------------------------------");
+
 
 		var authorP =$("<h5 id = 'author'>").text(author);
 
-		var date = response[0].publishDate;
+		var date = response[i].publishDate;
 			console.log(date);
+			console.log("---------------------------------");
+
 
 		var dateP =$("<h5 id = 'date'>").text(date)	
 
-		// var link = response[0].url;
-		// 	console.log(link);
+		var link = response[i].url;
+			console.log(link);
+			console.log("---------------------------------");
 
-		// var linkP =$("<a href=' "+ article.web_url +"'>" +article.web_url + "</a>");
 
-		nDiv.append(titleP, authorP, dateP);
+		var linkP =$("<a href=' "+ response[i].url + "'>"+response[i].url + "</a>");
+
+		nDiv.append(titleP, authorP, dateP, linkP);
 
 		$("#titles").html(nDiv);
+//-------------------------------------------------------------------
 
+		
+	}
   })
 });
-// var numResults = "";
 
-// var queryURLBase = "https://covidtracking.com/api/press"
-
-// function runQuery(numArticles, queryURL){
-
-// 	$.ajax({url: queryURL, method: "GET"})
-// 		.done(function(press) {
-
-// 			// console.log(response);
-
-// 			//troubleshooting
-// 			console.log(queryURL);
-// 			console.log(numArticles);
-// 			console.log(press);
-// 		})
-// }
-
-
-// $('#submit').on('click', function() {
-// 	numResults = $("#articles").val();
-// 	console.log(response[0].author);
-
-// 	// alert("test");
-
-// 	// runQuery(numResults, queryURLBase);
-// })
-
-
- 
-//   var articleCounter = 0;
   
 
 var gifArray = ['Cats', 'Animals', 'Monkeys Dancing', 'Boredom'];
